@@ -30,8 +30,8 @@
             <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
         </form>
 
-        <h2>Welcome, ${pageContext.request.userPrincipal.name}. |
-            <a onclick="document.forms['logoutForm'].submit()">Logout</a>
+        <h2>Welcome ${pageContext.request.userPrincipal.name} |
+            <a class="alert-success" onclick="document.forms['logoutForm'].submit()">Logout</a>
         </h2>
 
         <h4 class="text-center"><a href="${contextPath}/content/${rootFolder}">click to view [${rootFolder}] catalog</a></h4>

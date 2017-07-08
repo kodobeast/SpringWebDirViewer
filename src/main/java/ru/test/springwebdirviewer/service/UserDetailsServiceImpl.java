@@ -1,5 +1,6 @@
 package ru.test.springwebdirviewer.service;
 
+import ru.test.springwebdirviewer.annotation.ExecTime;
 import ru.test.springwebdirviewer.dao.UserDao;
 import ru.test.springwebdirviewer.model.Role;
 import ru.test.springwebdirviewer.model.User;
@@ -19,6 +20,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
     @Autowired
     private UserDao userDao;
 
+    @ExecTime
     @Override
     @Transactional(readOnly = true)
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {

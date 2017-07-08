@@ -3,6 +3,7 @@ package ru.test.springwebdirviewer.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.support.ReloadableResourceBundleMessageSource;
 import org.springframework.stereotype.Service;
+import ru.test.springwebdirviewer.annotation.ExecTime;
 
 import java.io.File;
 import java.util.*;
@@ -15,6 +16,7 @@ public class DirectoryContentServiceImpl implements DirectoryContentService {
 
     File[] contentArray = null;
 
+    @ExecTime
     @Override
     public List<String> getContentInto(String searchDirectory, boolean directories) {
 

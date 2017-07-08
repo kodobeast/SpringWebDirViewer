@@ -1,5 +1,6 @@
 package ru.test.springwebdirviewer.service;
 
+import ru.test.springwebdirviewer.annotation.ExecTime;
 import ru.test.springwebdirviewer.dao.RoleDao;
 import ru.test.springwebdirviewer.dao.UserDao;
 import ru.test.springwebdirviewer.model.Role;
@@ -32,6 +33,7 @@ public class UserServiceImpl implements UserService {
         userDao.save(user);
     }
 
+    @ExecTime
     @Override
     public User findByUsername(String username) {
         return userDao.findByUsername(username);
